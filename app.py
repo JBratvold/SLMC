@@ -4,9 +4,6 @@ import locale
 
 app = Flask(__name__)
 
-# Set the locale to use commas as the thousands separator
-locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
-
 # System ID's
 JITA_SYSTEM_ID = 30000142
 
