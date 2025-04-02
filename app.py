@@ -15,13 +15,28 @@ Isogen = 37
 Nocxium = 38
 Zydrine = 39
 Megacyte = 40
-# Pyroxeres = 1224
+Pyroxeres = 1224
 
 # Component ID's
 AutoIntegrityPreservationSeal = 57478
 LifeSupportBackupUnit = 57486
 DreadGuristasCrystalTag = 17244
 CaldariCU1NexusChip = 17646
+
+TYPE_NAMES = {
+    34: "Tritanium",
+    35: "Pyerite",
+    36: "Mexallon",
+    37: "Isogen",
+    38: "Nocxium",
+    39: "Zydrine",
+    40: "Megacyte",
+    1224: "Pyroxeres",
+    57478: "Auto Integrity Preservation Seal",
+    57486: "Life Support Backup Unit",
+    17244: "Dread Guristas Crystal Tag",
+    17646: "Caldari CU-1 Nexus Chip",
+}
 
 
 # Ship Blueprints
@@ -114,6 +129,10 @@ def calculate_total_cost(ship_name, lp_to_isk_ratio):
         "total_cost": total_cost,
         "lp_to_isk_ratio": lp_to_isk_ratio  # Add LP conversion ratio to data
     }, None
+
+@app.template_filter('get_type_name')
+def get_type_name(type_id):
+    return TYPE_NAMES.get(type_id, f"Unknown Item (ID: {type_id})")
 
 # Define a custom filter to format numbers with commas and decimals
 @app.template_filter('format_number')

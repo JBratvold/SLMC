@@ -88,15 +88,8 @@
             {% for type_id, material in materials.items() %}
             <tr>
                 <td>
-                    {% if type_id == 34 %}
-                        Tritanium
-                    {% elif type_id == 1224 %}
-                        Pyroxeres
-                    {% elif type_id == 37 %}
-                        Isogen
-                    {% else %}
-                        Unknown Item (ID: {{ type_id }})
-                    {% endif %}
+                    {{ type_id | get_type_name }}
+
                 </td>
                 <td>{{ material.price_per_unit or "N/A" | format_number }}</td>
                 <td>{{ material.quantity | format_number(0) }}</td>
