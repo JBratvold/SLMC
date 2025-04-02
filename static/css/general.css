@@ -1,3 +1,98 @@
+/* Global Styles */
 body {
-    color: red;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Table Styles */
+table {
+    width: 70%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #2a2a2a;
+    border: 1px solid #555;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #555;
+    text-align: center;
+}
+
+th {
+    background-color: #444;
+    color: #ffd700;
+}
+
+tr:nth-child(even) {
+    background-color: #333;
+}
+
+tr:nth-child(odd) {
+    background-color: #3d3d3d;
+}
+
+/* Section Header Styles */
+.section-header {
+    background-color: #1a1a1a !important;
+    color: #ffd700;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Total Cost Styles */
+.total-cost {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffd700;
+}
+
+/* Back Button Styles */
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #ffd700;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #e6c200;
 }

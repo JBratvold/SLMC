@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="form-container">
+        <form method="POST">
+            <label for="ship">Select Ship:</label>
+            <select id="ship" name="ship">
+                {% for ship in ships %}
+                    <option value="{{ ship }}">{{ ship }}</option>
+                {% endfor %}
+            </select>
+
+            <label for="lp_to_isk_ratio">Enter LP to ISK Conversion Rate (ISK per LP):</label>
+            <input type="number" id="lp_to_isk_ratio" name="lp_to_isk_ratio" value="1000" required>
+
+            <button type="submit">Calculate</button>
+        </form>
+
+        {% if cost_data %}
+        <div class="results">
+            <h2>Results</h2>
+            <p><strong>Ship:</strong> {{ cost_data.ship_name }}</p>
+            <p><strong>Total Cost:</strong> {{ cost_data.total_cost | format_number }}</p>
+            <h3>Materials Cost:</h3>
+            <ul>
+                {% for type_id, material in cost_data.materials.items() %}
+                    <li>
+                        <strong>{{ material.name }}</strong>: 
+                        {{ material.total_price | format_number }} ISK ({{ material.quantity }} units)
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+{% endblock %}

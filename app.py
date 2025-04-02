@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, jsonify
 import requests
-import locale
 
 app = Flask(__name__)
 
@@ -142,8 +141,8 @@ def format_number(value, decimals=2):
     except ValueError:
         return value  # If the value isn't a number, return it as-is
 
-@app.route("/", methods=["GET", "POST"])
-def index():
+@app.route("/lpcalculator", methods=["GET", "POST"])
+def lpCalc():
     if request.method == "POST":
         # Get the user-defined LP to ISK ratio from the form
         lp_to_isk_ratio = float(request.form.get("lp_to_isk_ratio", 1000))
@@ -156,7 +155,11 @@ def index():
         
         return render_template("result.html", **cost_data)
     
-    return render_template("index.html", ships=SHIP_BLUEPRINTS)
+    return render_template("lpcalculator.html", ships=SHIP_BLUEPRINTS)
 
-if __name__ == "__main__":
-    app.run(debug=False)
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
