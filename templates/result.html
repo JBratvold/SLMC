@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ ship_name }} Cost Breakdown</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+        table {
+            width: 70%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #2a2a2a;
+            border: 1px solid #555;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #555;
+            text-align: center;
+        }
+        th {
+            background-color: #444;
+            color: #ffd700;
+        }
+        tr:nth-child(even) {
+            background-color: #333;
+        }
+        tr:nth-child(odd) {
+            background-color: #3d3d3d;
+        }
+        .section-header {
+            background-color: #1a1a1a !important;
+            color: #ffd700;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .total-cost {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ffd700;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #ffd700;
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .back-btn:hover {
+            background-color: #e6c200;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ ship_name }} Cost Breakdown</h1>
+
+    <!-- Display LP to ISK Conversion Rate -->
+    <p>LP Conversion Rate: {{ lp_to_isk_ratio }} ISK/LP</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Price per Unit (ISK)</th>
+                <th>Quantity</th>
+                <th>Total Price (ISK)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dynamic Resources -->
+            <tr><td colspan="4" class="section-header">Minerals & Components</td></tr>
+            {% for type_id, material in materials.items() %}
+            <tr>
+                <td>
+                    {{ type_id | get_type_name }}
+
+                </td>
+                <td>{{ material.price_per_unit or "N/A" | format_number }}</td>
+                <td>{{ material.quantity | format_number(0) }}</td>
+                <td>{{ material.total_price | format_number }}</td>
+            </tr>
+            {% endfor %}
+
+            <!-- LP Shop & Manufacturing Costs -->
+            <tr><td colspan="4" class="section-header">LP Shop & Manufacturing Costs</td></tr>
+            <tr>
+                <td>ISK Cost (from LP Shop)</td>
+                <td></td>
+                <td></td>
+                <td>{{ flat_isk_cost | format_number }}</td>
+            </tr>
+            <tr>
+                <td>LP Cost</td>
+                <td>({{ lp_to_isk_ratio | format_number(0) }} ISK/LP)</td>
+                <td>{{ lp_cost | format_number(0) }} LP</td>
+                <td>{{ (lp_cost * lp_to_isk_ratio) | format_number }}</td>
+            </tr>
+            <tr>
+                <td>Manufacturing Cost</td>
+                <td></td>
+                <td></td>
+                <td>{{ manufacturing_cost | format_number }}</td>
+            </tr>
+
+            <!-- Total Cost -->
+            <tr><td colspan="4" class="section-header">Total Cost</td></tr>
+            <tr>
+                <td class="total-cost">Cost (pre-tax)</td>
+                <td></td>
+                <td></td>
+                <td class="total-cost">{{ total_cost | format_number }} ISK</td>
+            </tr>
+            <tr>
+                <td class="total-cost">Final ISK Cost</td>
+                <td>Sales Tax (3.37%) <br> {{ (total_cost * 0.0337) | format_number }}</td>
+                <td>Broker's Fee (1.5%) <br> {{ (total_cost * 0.015) | format_number }}</td>
+                <td class="total-cost">{{ (total_cost + (total_cost * 0.0487)) | format_number }} ISK</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Link Back to Home -->
+    <a href="/" class="back-btn">Back to Home</a>
+</body>
+</html>
