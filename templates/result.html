@@ -95,7 +95,7 @@
                     {% elif type_id == 37 %}
                         Isogen
                     {% else %}
-                        Unknown Mineral (ID: {{ type_id }})
+                        Unknown Item (ID: {{ type_id }})
                     {% endif %}
                 </td>
                 <td>{{ material.price_per_unit or "N/A" | format_number }}</td>
@@ -128,10 +128,16 @@
             <!-- Total Cost -->
             <tr><td colspan="4" class="section-header">Total Cost</td></tr>
             <tr>
-                <td class="total-cost">Final ISK Cost</td>
+                <td class="total-cost">Cost (pre-tax)</td>
                 <td></td>
                 <td></td>
                 <td class="total-cost">{{ total_cost | format_number }} ISK</td>
+            </tr>
+            <tr>
+                <td class="total-cost">Final ISK Cost</td>
+                <td>Sales Tax (3.37%) <br> {{ (total_cost * 0.0337) | format_number }}</td>
+                <td>Broker's Fee (1.5%) <br> {{ (total_cost * 0.015) | format_number }}</td>
+                <td class="total-cost">{{ (total_cost + (total_cost * 0.0487)) | format_number }} ISK</td>
             </tr>
         </tbody>
     </table>
