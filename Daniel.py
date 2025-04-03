@@ -86,7 +86,34 @@ SHIP_BLUEPRINTS = {
                       Megacyte: 2_000
                       AutoIntegrityPreservationSeal: 100
                       LifeSupportBackUnit: 50},
-        "flat_isk_cost": 
-                      
-                      
+        "flat_isk_cost": 10_000_000,
+        "manufacturing_cost": 7_734_558,
+    },
+    "Ferox Navy Issue (ISK)": {
+        "materials": { Tritanium: 2_800_000
+                      Pyerite: 1_000_000
+                      Mexallon: 180_00
+                      Isogen: 20_000
+                      Nocxium: 10_000
+                      Zydrine: 4_000
+                      Megacyte: 2_000
+                      AutoIntegrityPreservationSeal: 100
+                      LifeSupportBackUnit: 50},
+        "flat_isk_cost": 10_000_000,
+        "manufacturing_cost": 7_734_558,
+    },
+    "Osprey Navy Issue (Tags)" {
+        "materials": { Tritanium: 540_000,
+                      Pyerite: 180_000, 
+                      Mexallon: 36_000,
+                      Isogen: 10_000,
+                      Nocxium: 1_500,
+                      Zydrine: 1_000,
+                      Megacyte: 500,
+                      DreadGuristasCrystalTag: 1,
+                      AutoIntegrityPreservationSeal: 50,
+                      LifeSupportBackupUnit: 25},
+        "flat_isk_cost": 0,
+        "lp_cost": 18_000,
+        "manufacturing_cost": 1_800_000,
 }
