@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="calculator-container">
+    <!-- Page Heading -->
+    <h1 class="heading">Mining Yield Calculator</h1>
+    <p class="description">This calculator is used to calculate the amount of ore you are expected to receive after a specific amount of time. Please input the details into the form below.</p>
+  
+    <!-- Form for User Input -->
+    <form id="calculator-form">
+        <!-- Ore Type Input -->
+        <div class="form-group">
+            <label for="name">Ore Type (optional)</label>
+            <input type="text" id="name" class="input-field" placeholder="Ore">
+        </div>
+  
+        <!-- Yield per Cycle Input -->
+        <div class="form-group">
+            <label for="amount">Yield (per 1 cycle)</label>
+            <small class="note">Note: This is found by running a complete cycle and noting how much ore was returned to your inventory.</small>
+            <input type="number" id="amount" class="input-field" placeholder="Yield" required>
+        </div>
+  
+        <!-- Cycle Length (seconds) Input -->
+        <div class="form-group">
+            <label for="length">Cycle Length (in seconds)</label>
+            <small class="note">Note: This is found by hovering over your mining tool (laser, gas scooper, etc.)</small>
+            <input type="number" id="length" class="input-field" placeholder="Length" required>
+        </div>
+  
+        <!-- Number of Players Input -->
+        <div class="form-group">
+            <label for="players">Number of players mining</label>
+            <input type="number" id="players" class="input-field" placeholder="1" value="1">
+        </div>
+  
+        <!-- Time Mining (minutes) Input -->
+        <div class="form-group">
+            <label for="time">Time mining (minutes)</label>
+            <input type="number" id="time" class="input-field" placeholder="60" value="60">
+        </div>
+  
+        <!-- Calculate Button -->
+        <button type="button" class="calculate-button" onclick="calculate()">Calculate</button>
+    </form>
+  
+    <!-- Result Display -->
+    <div class="result">
+        <h3>Result: "<i><span id="display">---</span></i>"</h3>
+    </div>
+</div>
+
+<script>
+    function calculate() {
+        // Get form input values
+        const name = document.getElementById('name').value;
+        let amount = parseFloat(document.getElementById('amount').value);
+        const length = parseFloat(document.getElementById('length').value);
+        const players = parseInt(document.getElementById('players').value, 10);
+        const time = parseInt(document.getElementById('time').value, 10);
+
+        // Validation for inputs to ensure proper calculation
+        if (isNaN(amount) || isNaN(length) || isNaN(players) || isNaN(time)) {
+            document.getElementById('display').innerHTML = "Please enter valid numbers in all fields.";
+            return;
+        }
+
+        // Calculate the expected ore yield
+        amount = (amount / length) * 60 * time * players;
+        amount = Math.round(amount * 100) / 100; // Round to 2 decimals
+
+        // Display result
+        const resultText = `<b>${amount}</b> of <b>${name}</b> will be obtained in <b>${time}</b> minutes for <b>${players}</b> miner(s).`;
+        document.getElementById('display').innerHTML = resultText;
+    }
+</script>
+{% endblock %}

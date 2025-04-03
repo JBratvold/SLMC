@@ -165,5 +165,9 @@ def index():
 def page_not_found(e):
     return render_template("404.html"), 404
 
+@app.route('/yieldcalculator')
+def yieldCalc():
+    return render_template('yieldcalculator.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
