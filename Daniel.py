@@ -76,4 +76,17 @@ SHIP_BLUEPRINTS = {
         "lp_cost": 18_000,
         "manufacturing_cost": 1_800_000,
     },
+    "Drake Navy Issue (ISK)": {
+        "materials": { Tritanium: 2_800_000
+                      Pyerite: 1_000_000
+                      Mexallon: 180_00
+                      Isogen: 20_000
+                      Nocxium: 10_000
+                      Zydrine: 4_000
+                      Megacyte: 2_000
+                      AutoIntegrityPreservationSeal: 100
+                      LifeSupportBackUnit: 50},
+        "flat_isk_cost": 
+                      
+                      
 }
