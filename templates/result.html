@@ -23,11 +23,26 @@
             <!-- Dynamic Resources -->
             <tr><td colspan="4" class="section-header">Minerals & Components</td></tr>
             {% for type_id, material in materials.items() %}
-            <tr>
+            <tr {% if material.price_per_unit is none %} style="background-color: #cf1a1a; font-weight: bold;" {% endif %}>
                 <td>{{ type_id | get_type_name }}</td>
-                <td>{{ material.price_per_unit or "N/A" | format_number }}</td>
+            
+                <td>
+                    {% if material.price_per_unit is none %}
+                        None in Market
+                    {% else %}
+                        {{ material.price_per_unit | format_number }}
+                    {% endif %}
+                </td>
+            
                 <td>{{ material.quantity | format_number(0) }}</td>
-                <td>{{ material.total_price | format_number }}</td>
+            
+                <td>
+                    {% if material.total_price is none %}
+                        0.00
+                    {% else %}
+                        {{ material.total_price | format_number }}
+                    {% endif %}
+                </td>
             </tr>
             {% endfor %}
 
