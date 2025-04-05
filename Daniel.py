@@ -412,5 +412,14 @@ SHIP_BLUEPRINTS = {
         "flat_isk_cost": 2_000_000,
         "lp_cost": 3_000,
         "manufacturing_cost": 2_855,
-     },             
+     },
+     "Caldari Navy Large Shield Extender (NoCraft)": {
+         "materials": { LargeShieldExtenderI: 1,
+                       FederationNavyFleetColonelInsigniaI: 2,
+                       FederationNavyFleetColonelInsigniaII: 4,},
+         "flat_isk_cost": 4_000_000,
+         "lp_cost": 10_000,
+         "manufacturing_cost": 0,
+     },
+                       
 }
