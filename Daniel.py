@@ -18,6 +18,26 @@ CaldariCU1NexusChip = 17646
 CaldariBY1NexusChip = 17647
 CaldariAZ1NexusChip = 17643
 EstamelTharchonsTag = 17295
+MediumShieldExtenderI = 3829
+SmallShieldExtenderI = 377
+LargeShieldExtenderI = 3839
+FederationNavyCommandSeargeantMajorInsigniaI = 15646
+FederationNavyFleetMajorInsigniaI = 15593
+FederationNavyFleetColonelInsigniaI = 15594
+FederationNavyFleetColonelInsigniaII = 15673
+CapBooster100 = 3554
+CapBooster150 = 11283
+CapBooster200 = 11285
+CapBooster3200 = 41489
+CapBooster400 = 11287
+CapBooster50 = 264
+CapBooster25 = 263
+CapBooster75 = 3552
+CapBooster800 = 11289
+HornetI = 2464
+VespaI = 15508
+WardenI = 23559
+WaspI = 1201
 
 TYPE_NAMES = {
     34: "Tritanium",
@@ -355,4 +375,24 @@ SHIP_BLUEPRINTS = {
         "lp_cost": 100_000,
         "manufacturing_cost": 999_999_999_999_999, # TODO FIND MANUFACTURING COST FOR THIS SHIP ------------------------------------------ 
     },
+    "Caldari Navy Medium Shield Extender (NoCraft)": {
+        "materials": { MediumShieldExtenderI: 1,
+                      FederationNavyFleetColonelInsigniaI: 2,}
+        "flat_isk_cost": 2_000_000,
+        "lp_cost": 3_000,
+        "manufacturing_cost": 0,
+    },
+     "Caldari Navy Medium Shield Extender (Craft)": {
+        "materials": { FederationNavyFleetColonelInsigniaI: 2,
+                      Tritanium: 1_701,
+                      Pyerite: 411,
+                      Mexallon: 162,
+                      Isogen: 6,
+                     }
+        "flat_isk_cost": 2_000_000,
+        "lp_cost": 3_000,
+        "manufacturing_cost": 2_855,
+        
+
+                
 }
