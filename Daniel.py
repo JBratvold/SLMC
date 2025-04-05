@@ -297,7 +297,7 @@ SHIP_BLUEPRINTS = {
                       CaldariCU1NexusChip: 5,
                       AutoIntegrityPreservationSeal: 100,
                       LifeSupportBackupUnit: 50},
-        "flat_isk_cost": 10_000_000,
+        "flat_isk_cost": 0,
         "lp_cost": 40_000,
         "manufacturing_cost": 7_734_558,
     },
