@@ -412,5 +412,5 @@ SHIP_BLUEPRINTS = {
         "flat_isk_cost": 2_000_000,
         "lp_cost": 3_000,
         "manufacturing_cost": 2_855,
-     }             
+     },             
 }
