@@ -57,6 +57,26 @@ TYPE_NAMES = {
     17646: "Caldari CU-1 Nexus Chip",
     17647: "Caldari BY-1 Nexus Chip",
     17643: "Caldari AZ-1 Nexus Chip",
+    3829: "Medium Shield Extender I",
+    377: "Small Shield Extender I",
+    3839: "Large Shield Extender I",
+    15646: "Federation Navy Command Sergeant Major Insignia I",
+    15593: "Federation Navy Fleet Major Insignia I",
+    15594: "Federation Navy Fleet Colonel Insignia I",
+    15673: "Federation Navy Fleet Colonel Insignia II",
+    3554: "Cap Booster 100",
+    11283: "Cap Booster 150",
+    11285: "Cap Booster 200",
+    41489: "Cap Booster 3200",
+    11287: "Cap Booster 400",
+    264: "Cap Booster 50",
+    263: "Cap Booster 25",
+    3552: "Cap Booster 75",
+    11289: "Cap Booster 800",
+    2464: "Hornet I",
+    15508: "Vespa I",
+    23559: "Warden I",
+    1201: "Wasp I",
 }
 
 
@@ -377,7 +397,7 @@ SHIP_BLUEPRINTS = {
     },
     "Caldari Navy Medium Shield Extender (NoCraft)": {
         "materials": { MediumShieldExtenderI: 1,
-                      FederationNavyFleetColonelInsigniaI: 2,}
+                      FederationNavyFleetColonelInsigniaI: 2},
         "flat_isk_cost": 2_000_000,
         "lp_cost": 3_000,
         "manufacturing_cost": 0,
@@ -388,11 +408,9 @@ SHIP_BLUEPRINTS = {
                       Pyerite: 411,
                       Mexallon: 162,
                       Isogen: 6,
-                     }
+                     },
         "flat_isk_cost": 2_000_000,
         "lp_cost": 3_000,
         "manufacturing_cost": 2_855,
-        
-
-                
+     }             
 }
