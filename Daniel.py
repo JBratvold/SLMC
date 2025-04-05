@@ -397,7 +397,8 @@ SHIP_BLUEPRINTS = {
     },
     "Caldari Navy Medium Shield Extender (NoCraft)": {
         "materials": { MediumShieldExtenderI: 1,
-                      FederationNavyFleetColonelInsigniaI: 2},
+                      FederationNavyFleetColonelInsigniaI: 2
+                     },
         "flat_isk_cost": 2_000_000,
         "lp_cost": 3_000,
         "manufacturing_cost": 0,
@@ -407,7 +408,7 @@ SHIP_BLUEPRINTS = {
                       Tritanium: 1_701,
                       Pyerite: 411,
                       Mexallon: 162,
-                      Isogen: 6,
+                      Isogen: 6
                      },
         "flat_isk_cost": 2_000_000,
         "lp_cost": 3_000,
@@ -416,7 +417,8 @@ SHIP_BLUEPRINTS = {
      "Caldari Navy Large Shield Extender (NoCraft)": {
          "materials": { LargeShieldExtenderI: 1,
                        FederationNavyFleetColonelInsigniaI: 2,
-                       FederationNavyFleetColonelInsigniaII: 4,},
+                       FederationNavyFleetColonelInsigniaII: 4
+                      },
          "flat_isk_cost": 4_000_000,
          "lp_cost": 10_000,
          "manufacturing_cost": 0,
