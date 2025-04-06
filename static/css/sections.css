@@ -1,0 +1,95 @@
+/* Two Column Section */
+.two-column-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 300px auto;
+    padding: 40px 20px;
+    gap: 40px;
+}
+
+.text-column {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+    color: #fff;
+}
+
+.text-column h2 {
+    color: #ff8800;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.text-column p, .text-column ul {
+    font-size: 23px;
+    line-height: 1.6;
+}
+
+.text-column ul {
+    padding-left: 20px;
+}
+
+.text-column li {
+    margin-bottom: 10px;
+}
+
+.image-column {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.image-column img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 119, 255, 0.4);
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Fancy Read More Button */
+.read-more-button {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #ff8800;
+    color: #0d0d0d;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px; /* Less rounded */
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    box-shadow: 0 0 12px rgba(255, 136, 0, 0.4);
+}
+
+.read-more-button .arrow {
+    margin-left: 10px;
+    font-size: 20px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.read-more-button:hover {
+    background-color: #cc6d00;
+}
+
+.read-more-button:hover .arrow {
+    transform: translateX(5px);
+}
+
+/* Section Styles */
+section {
+    padding: 60px 20px;
+}
+
+/* Reduce margin on first section after splash */
+.first-section {
+    margin-top: 0;
+}

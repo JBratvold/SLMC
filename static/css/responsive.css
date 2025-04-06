@@ -1,0 +1,37 @@
+@media (max-width: 768px) {
+    .two-column-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .text-column {
+        text-align: center;
+    }
+
+    .reverse {
+        flex-direction: column;
+    }
+
+    .calculator-container {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .calculator-container h1 {
+        font-size: 28px;
+    }
+
+    .input-field {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .calculate-button {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .services-cards {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,20 @@
+/* CTA Button Styles */
+.cta-button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #ff8800;
+    color: #0d0d0d;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 50px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    border: 2px solid #a8d3fe;
+    box-shadow: 0 0 10px rgba(161,203,244,255);
+}
+
+.cta-button:hover {
+    background-color: #cc6d00;
+    transform: scale(1.1);
+}

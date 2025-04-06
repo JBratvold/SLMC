@@ -1,8 +1,72 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <section>
-        <h2>Welcome to the Sacred Legend Mining Corporation</h2>
-        <p>SLMC is a top-tier mining corporation in EVE Online, committed to efficiency, professionalism, and community. Whether you’re new to EVE or an experienced player, we offer a supportive environment for all members to thrive in the world of asteroid mining.</p>
-    </section>
+
+<!-- Welcome Section -->
+<section class="two-column-section first-section">
+    <div class="text-column">
+        <h2>Welcome to Sacred Legend Mining Corporation</h2>
+        <p>SLMC is a top-tier mining corporation in EVE Online, committed to efficiency, professionalism, and community. Whether you're a rookie or a veteran capsuleer, you'll find a place here to thrive and profit.</p>
+        <a href="#more-info" class="read-more-button">Read More <span class="arrow">→</span></a>
+    </div>
+    <div class="image-column">
+        <img src="{{ url_for('static', filename='img/mining_fleet.jpg') }}" alt="Fleet Mining" />
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="two-column-section reverse">
+    <div class="text-column">
+        <h2>Who We Are</h2>
+        <p>Founded by veteran pilots, SLMC unites miners, industrialists, and logistics experts to build a thriving industry in high-sec and null-sec space. We're proud of our community, our ops, and our infrastructure.</p>
+        <a href="#more-info" class="read-more-button">Read More <span class="arrow">→</span></a>
+    </div>
+    <div class="image-column">
+        <img src="{{ url_for('static', filename='img/industry_station.jpg') }}" alt="Industrial Station" />
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="two-column-section">
+    <div class="text-column">
+        <h2>Services</h2>
+        <div class="services-cards">
+            <div class="service-card">
+                <h3>🚀 Boosted Fleets</h3>
+                <p>Fly with ORCA and Rorqual support for max efficiency.</p>
+            </div>
+            <div class="service-card">
+                <h3>💰 Buyback Program</h3>
+                <p>Get instant ISK for your ore with our fast buyback system.</p>
+            </div>
+            <div class="service-card">
+                <h3>🛠️ Powerful Tools</h3>
+                <p>Use our LP & Yield calculators to optimize your profits.</p>
+            </div>
+            <div class="service-card">
+                <h3>🏗️ Corp Structures</h3>
+                <p>Refine and build using corp-owned high-efficiency facilities.</p>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- Call to Action -->
+<section class="two-column-section reverse">
+    <div class="text-column">
+        <h2>Join Us Today</h2>
+        <p>Become part of a well-organized, fun-loving corp with big plans. Mining doesn’t have to be boring — not when you're flying with SLMC.</p>
+        <button class="cta-button" onclick="window.location.href='/recruitment'">Apply Now</button>
+    </div>
+    <div class="image-column">
+        <img src="{{ url_for('static', filename='img/recruitment.jpg') }}" alt="Recruitment" />
+    </div>
+</section>
+
+
+  
+  
+
 {% endblock %}

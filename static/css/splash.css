@@ -1,0 +1,35 @@
+/* Splash Screen (Home Page) */
+#splash-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background: url('../img/background.jpg') center/cover no-repeat;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+    filter: drop-shadow(0px 0px 8px rgba(0, 119, 255, 0.5));
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
