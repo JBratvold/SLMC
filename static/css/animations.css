@@ -9,3 +9,23 @@
         transform: translateY(0);
     }
 }
+
+/* Fade in from left */
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.8s ease-out;
+}
+
+/* Fade in from right */
+.fade-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.8s ease-out;
+}
+
+/* When in view */
+.in-view {
+    opacity: 1;
+    transform: translateX(0);
+}
