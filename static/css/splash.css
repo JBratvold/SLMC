@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 85vh;
     background: url('../img/background.jpg') center/cover no-repeat;
     text-align: center;
     animation: fadeIn 1.5s ease-in-out;

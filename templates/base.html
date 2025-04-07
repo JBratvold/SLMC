@@ -54,46 +54,47 @@
 </head>
 
 <body>
-    <nav id="navbar" class="navigation">
-        <div class="nav-left">
-            <a href="/"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="Sacred Legend Mining Logo" class="nav-logo" /></a>
-        </div>
-        <div class="nav-center">
-            <a href="/">Home</a>
-            <div class="dropdown">
-                <button class="dropbtn">LP ▼</button>
-                <div class="dropdown-content">
-                    <a href="/x">x</a>
-                    <a href="/lpcalculator">LP Calculator</a>
+    <div class="content-wrapper">
+        <nav id="navbar" class="navigation">
+            <div class="nav-left">
+                <a href="/"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="Sacred Legend Mining Logo" class="nav-logo" /></a>
+            </div>
+            <div class="nav-center">
+                <a href="/">Home</a>
+                <div class="dropdown">
+                    <button class="dropbtn">LP ▼</button>
+                    <div class="dropdown-content">
+                        <a href="/x">x</a>
+                        <a href="/lpcalculator">LP Calculator</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Mining ▼</button>
+                    <div class="dropdown-content">
+                        <a href="/x">x</a>
+                        <a href="/yieldcalculator">Yield Calculator</a>
+                        <a href="/x">x</a>
+                    </div>
                 </div>
             </div>
-            <div class="dropdown">
-                <button class="dropbtn">Mining ▼</button>
-                <div class="dropdown-content">
-                    <a href="/x">x</a>
-                    <a href="/yieldcalculator">Yield Calculator</a>
-                    <a href="/x">x</a>
-                </div>
+        </nav>
+        
+
+        {% if request.path == '/' %}
+        <!-- Splash Screen for Index Page Only -->
+        <header id="splash-header">
+            <div class="logo-container">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Sacred Legend Mining Logo" class="logo" />
+                <h1>Sacred Legend Mining Corporation</h1>
             </div>
-        </div>
-    </nav>
-    
+            <p>Your trusted mining partner in the vast universe of EVE Online</p>
+            <button class="cta-button" onclick="window.location.href='recruitment.html'">Join Us</button>
+        </header>
+        {% endif %}
 
-    {% if request.path == '/' %}
-    <!-- Splash Screen for Index Page Only -->
-    <header id="splash-header">
-        <div class="logo-container">
-            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Sacred Legend Mining Logo" class="logo" />
-            <h1>Sacred Legend Mining Corporation</h1>
-        </div>
-        <p>Your trusted mining partner in the vast universe of EVE Online</p>
-        <button class="cta-button" onclick="window.location.href='recruitment.html'">Join Us</button>
-    </header>
-    {% endif %}
-
-    <section>
+        
         {% block content %}{% endblock %}
-    </section>
+    </div>
 
     <footer>
         <p>© 2025 Sacred Legend Mining Corporation | <a href="https://discord.gg/yourlink" target="_blank">Join our Discord</a></p>
