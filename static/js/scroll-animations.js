@@ -1,35 +1,24 @@
-// document.addEventListener('DOMContentLoaded', () => {
-//     const elements = document.querySelectorAll('.fade-in-left, .fade-in-right');
-
-//     const observer = new IntersectionObserver((entries) => {
-//         entries.forEach(entry => {
-//             if (entry.isIntersecting) {
-//                 entry.target.classList.add('in-view');
-//                 observer.unobserve(entry.target); // Remove if you want to re-animate on scroll
-//             }
-//         });
-//     }, {
-//         threshold: 1
-//     });
-
-//     elements.forEach(el => observer.observe(el));
-// });
-
-
 document.addEventListener('DOMContentLoaded', () => {
-    const elements = document.querySelectorAll('.fade-in-left, .fade-in-right');
+    const fadeElements = document.querySelectorAll('.fade-in-left, .fade-in-right, .fade-in-card');
 
     const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
+        entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('in-view');
-                observer.unobserve(entry.target); // Remove to re-trigger on scroll
+                const el = entry.target;
+
+                // Optional: stagger the delay on cards
+                if (el.classList.contains('fade-in-card')) {
+                    el.style.transitionDelay = `${index * 0.1}s`;
+                }
+
+                el.classList.add('in-view');
+                observer.unobserve(el); // Remove if you want to re-trigger
             }
         });
     }, {
-        threshold: 0.75, // Trigger when 75% of the element is visible
-        rootMargin: '-100px 0px' // Trigger earlier when element is closer to the top
+        threshold: 0.2,
+        rootMargin: '-100px 0px',
     });
 
-    elements.forEach(el => observer.observe(el));
+    fadeElements.forEach(el => observer.observe(el));
 });
