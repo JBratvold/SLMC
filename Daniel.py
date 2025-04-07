@@ -1,3 +1,22 @@
+# Changes will only be applied to website from the "config.py" file
+# Any changes made in "Daniel.py" will have to be copied and pasted into the "config.py" file 
+
+# Individual's LP balance within Sacred Legend Mining Corporation:
+# For example, if Sin Sacred owns 500k LP in the SLMC corp wallet, then set SinSacredLP = 500_000
+SinSacredLP = 0
+JupiterSacredLP = 0
+PlutoSacredLP = 0   
+DanielJoshLiquidationLP = 812_825
+
+# ISK that our LP Broker owes the individual:
+# For example, if the LP Broker owes Sin Sacred 2mil ISK, then set SinSacredISK = 2_000_000
+SinSacredISK = 0
+JupiterSacredISK = 0
+PlutoSacredISK = 0
+
+# System ID's
+JITA_SYSTEM_ID = 30000142
+
 # Mineral IDs
 Tritanium = 34
 Pyerite = 35
@@ -422,6 +441,5 @@ SHIP_BLUEPRINTS = {
          "flat_isk_cost": 4_000_000,
          "lp_cost": 10_000,
          "manufacturing_cost": 0,
-     },
-                       
+     },                   
 }

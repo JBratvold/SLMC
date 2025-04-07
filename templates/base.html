@@ -44,6 +44,9 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
     <!-- Link to CTA button styles -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/cta-button.css') }}">
+    <!-- Link to lpbalances styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/balances.css') }}">
+
 
  
 
@@ -64,16 +67,24 @@
                 <div class="dropdown">
                     <button class="dropbtn">LP ▼</button>
                     <div class="dropdown-content">
-                        <a href="/x">x</a>
+                        
                         <a href="/lpcalculator">LP Calculator</a>
                     </div>
                 </div>
                 <div class="dropdown">
                     <button class="dropbtn">Mining ▼</button>
                     <div class="dropdown-content">
-                        <a href="/x">x</a>
+                        
                         <a href="/yieldcalculator">Yield Calculator</a>
-                        <a href="/x">x</a>
+                        
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Management ▼</button>
+                    <div class="dropdown-content">
+                        
+                        <a href="/balances">ISK/LP Balances</a>
+                        
                     </div>
                 </div>
             </div>

@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% block title %}LP and ISK Balances - Sacred Legend Mining Corporation{% endblock %}
+
+{% block content %}
+
+<section class="balances-section">
+    <!-- LP Balances Section -->
+    <div class="section-header">
+        <h1 class="glow-text">📜 LP Balances</h1>
+        <p>Use this ledger to keep track of an individual's LP balance within <strong>Sacred Legend Mining Corporation</strong>.<br>
+           Please update balances whenever changes occur.
+        </p>
+    </div>
+
+    <div class="lp-card">
+        <ul class="lp-list">
+            <!-- Dynamically insert values from Flask variables -->
+            <li><span class="name">Sin Sacred</span><span class="lp">{{ SinSacredLP | format_number(0) }} LP</span></li>
+            <li><span class="name">Jupiter Sacred</span><span class="lp">{{ JupiterSacredLP | format_number(0)  }} LP</span></li>
+            <li><span class="name">Pluto Sacred</span><span class="lp">{{ PlutoSacredLP | format_number(0)  }} LP</span></li>
+            <li><span class="name">Daniel & Josh Liquidation</span><span class="lp">{{ DanielJoshLiquidationLP | format_number(0) }} LP</span></li>
+        </ul>
+    </div>
+
+    <div class="lp-note">
+        <p><em>The remaining LP in the corp is shared (to be divided equally) — earned primarily through the corp taxes.</em></p>
+    </div>
+</section>
+
+<!-- ISK Balances Section -->
+<section class="balances-section">
+    <div class="section-header">
+        <h1 class="glow-text">💰 ISK Balances</h1>
+        <p>Keep track of ISK the corporation owes to individuals through LP sales or other debts.
+            Please update balances whenever changes occur.
+        </p>
+    </div>
+
+    <div class="isk-card">
+        <ul class="isk-list">
+            <!-- Dynamically insert ISK balances from Flask variables -->
+            <li><span class="name">Sin Sacred</span><span class="isk">{{ SinSacredISK | format_number(0)  }} ISK</span></li>
+            <li><span class="name">Jupiter Sacred</span><span class="isk">{{ JupiterSacredISK | format_number(0)  }} ISK</span></li>
+            <li><span class="name">Pluto Sacred</span><span class="isk">{{ PlutoSacredISK | format_number(0)  }} ISK</span></li>
+        </ul>
+    </div>
+
+    <div class="isk-note">
+        <p><em>💳 The ISK balances reflect the amount owed to individuals for LP sold to the corporation or other transactions.</em></p>
+    </div>
+</section>
+
+<!-- Transaction Log Section -->
+<section class="balances-section">
+    <div class="section-header">
+        <h1 class="glow-text">📝 Transaction Log</h1>
+        <p>This log records each time LP is sold to the corporation. It includes the LP amount, ISK amount, and the transaction date.</p>
+    </div>
+
+    <div class="transaction-card">
+        <table class="transaction-log">
+            <thead>
+                <tr>
+                    <th>Date (YYYY-MM-DD)</th>
+                    <th>Seller</th>
+                    <th>Amount Sold (LP)</th>
+                    <th>Price (isk/lp)</th>
+                    <th>ISK</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2025-04-07</td>
+                    <td>John Doe</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1 ISK</td>
+                    <td>A sample transaction log.</td>
+                </tr>
+                <tr>
+                    <td>2025-04-07</td>
+                    <td>John Doe</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1 ISK</td>
+                    <td>A sample transaction log.</td>
+                </tr>
+                <tr>
+                    <td>2025-04-07</td>
+                    <td>John Doe</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1 ISK</td>
+                    <td>A sample transaction log.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="transaction-note">
+        <p><em>🔄 Please remember to update the log whenever a transaction occurs to maintain accurate records.</em></p>
+    </div>
+</section>
+
+{% endblock %}

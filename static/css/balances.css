@@ -1,0 +1,109 @@
+/* LP Balances Section Styles */
+.balances-section {
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background-color: rgba(20, 20, 30, 0.85);
+    border: 1px solid rgba(255, 136, 0, 0.3);
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 119, 255, 0.1);
+    color: #f0f0f0;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Spacing Between Sections */
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem; /* Increased margin-bottom for more space */
+}
+
+.section-header h1.glow-text {
+    font-size: 2.5rem;
+    color: #ffaa00;
+    text-shadow: 0 0 10px rgba(255, 136, 0, 0.7);
+}
+
+/* LP & ISK Cards Styles */
+.lp-card, .isk-card, .transaction-card {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 119, 255, 0.3);
+    margin-bottom: 3rem; /* Increased margin-bottom for more space */
+}
+
+/* LP and ISK Lists */
+.lp-list, .isk-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lp-list li, .isk-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    margin: 0.5rem 0;
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 4px solid #ffaa00;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.lp-list li:hover, .isk-list li:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.lp-list .name, .isk-list .name {
+    font-weight: bold;
+    color: #ffcc66;
+}
+
+.lp-list .lp, .isk-list .isk {
+    font-family: 'Courier New', monospace;
+    color: #00ccff;
+}
+
+/* Transaction Log Table Styles */
+.transaction-log {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 3rem; /* Increased top margin for more space */
+}
+
+.transaction-log th, .transaction-log td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid rgba(255, 136, 0, 0.5);
+}
+
+.transaction-log th {
+    background-color: rgba(0, 119, 255, 0.1);
+    color: #ffaa00;
+}
+
+.transaction-log td {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #f0f0f0;
+}
+
+.transaction-log tr:hover td {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Adding spacing for the bottom of the page */
+.transaction-note {
+    margin-top: 4rem; /* Increased margin-top for more space */
+    text-align: center;
+    font-style: italic;
+    color: #aaa;
+}
+
+/* Additional General Styling for Spacing */
+.lp-note, .isk-note {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1rem;
+    color: #bbb;
+}
