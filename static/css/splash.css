@@ -22,14 +22,17 @@
     filter: drop-shadow(0px 0px 8px rgba(0, 119, 255, 0.5));
 }
 
-/* Fade-in Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Blinking arrow below button */
+.scroll-arrow {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%) rotate(225deg);
+    width: 20px;
+    height: 20px;
+    border: solid 4px transparent;
+    border-left: 4px solid #ff8800;
+    border-top: 4px solid #ff8800;
+    animation: blink-arrow 1.5s infinite ease-in-out;
+    opacity: 0.5;
 }
