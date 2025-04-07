@@ -10,6 +10,25 @@
     }
 }
 
+/* Bounce animation */
+@keyframes bounce {
+    0% {
+        transform: translateY(0); /* Start at normal position */
+    }
+    30% {
+        transform: translateY(-5px); /* Move up */
+    }
+    50% {
+        transform: translateY(2.5px); /* Move down slightly */
+    }
+    70% {
+        transform: translateY(-2.5px); /* Move up again */
+    }
+    100% {
+        transform: translateY(0); /* Return to normal position */
+    }
+}
+
 /* Fade in from left */
 .fade-in-left {
     opacity: 0;
