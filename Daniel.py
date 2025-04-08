@@ -10,7 +10,7 @@ DanielJoshLiquidationLP = 812_825
 
 # ISK that our LP Broker owes the individual:
 # For example, if the LP Broker owes Sin Sacred 2mil ISK, then set SinSacredISK = 2_000_000
-SinSacredISK = 0
+SinSacredISK = 8_500_000_000
 JupiterSacredISK = 0
 PlutoSacredISK = 0
 
