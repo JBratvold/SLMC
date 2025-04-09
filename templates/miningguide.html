@@ -1,0 +1,210 @@
+{% extends "base.html" %}
+
+{% block title %}Mining Guide - Sacred Legend Mining Corporation{% endblock %}
+
+{% block content %}
+
+<section class="balances-section">
+    <div class="section-header">
+        <h1 class="glow-text">⛏️ Mining Guide</h1>
+        <p>This guide helps you understand mining operations within <strong>Sacred Legend Mining Corporation</strong>.</p>
+    </div>
+
+    <!-- Ore Mining Card -->
+    <div class="lp-card">
+        <h2 class="glow-subtitle">🪨 Ore Mining</h2>
+        <ul class="lp-list">
+            <p>Some ores come in different varieties. For example: Kernite, Luminous Kernite and Fiery Kernite. 
+                When mining, they will both yield the same amount, but the ISK and refining amounts vary between them.
+            </p>
+            <li><strong>High Sec:</strong> Veldspar</li>
+            <li><strong>Low Sec:</strong> Jaspet, Gneiss, Dark Ochre</li>
+            <li><strong>Worm Hole:</strong> ?</li>
+            <li><strong>Triglavian:</strong> ?</li>
+            <li><strong>Null Sec:</strong> ?</li>
+            <li><strong>Best Sites:</strong> ?</li>
+            <li><strong>Recommended Ships:</strong> Venture, Retriever/Covetor, Hulk, Porpoise</li>
+            <li><strong>Tips:</strong> Use mining crystals and boost with an Orca or Porpoise when possible.</li>
+        </ul>
+    </div>
+
+    <!-- Ice Mining Card -->
+    <div class="isk-card">
+        <h2 class="glow-subtitle">🧊 Ice Mining</h2>
+        <ul class="isk-list">
+            <li><strong>High Sec:</strong> ?</li>
+            <li><strong>Low Sec:</strong> ?</li>
+            <li><strong>Worm Hole:</strong> ?</li>
+            <li><strong>Triglavian:</strong> ?</li>
+            <li><strong>Null Sec:</strong> ?</li>
+            <li><strong>Best Sites:</strong> ?</li>
+            <li><strong>Recommended Ships:</strong> Skiff, Mackinaw, Orca with Ice Harvesting upgrades</li>
+            <li><strong>Tips:</strong> Ice mining cycles are longer — maximize yield with fleet boosts.</li>
+        </ul>
+    </div>
+
+    <!-- Gas Mining Card -->
+    <div class="lp-card">
+        <h2 class="glow-subtitle">💨 Gas Mining</h2>
+        <ul class="lp-list">
+            <li><strong>High Sec:</strong> ?</li>
+            <li><strong>Low Sec:</strong> ?</li>
+            <li><strong>Worm Hole:</strong> ?</li>
+            <li><strong>Triglavian:</strong> ?</li>
+            <li><strong>Null Sec:</strong> ?</li>
+            <li><strong>Best Sites:</strong> ?</li>
+            <li><strong>Recommended Ships:</strong> Venture (T1), Prospect (T2)</li>
+            <li><strong>Tips:</strong> Watch for sleepers and always bring a cloak in wormholes.</li>
+        </ul>
+    </div>
+
+    <!-- Extra: Mining Boosts & Fleet Tips -->
+    <div class="isk-card">
+        <h2 class="glow-subtitle">📈 Boosts & Fleet Tips</h2>
+        <ul class="isk-list">
+            <li><strong>Fleet Bonuses:</strong> Mining Foreman skills, Command Bursts (Mining Laser Optimization)</li>
+            <li><strong>Support Ships:</strong> Orca, Porpoise</li>
+            <li><strong>Structure Support:</strong> Athanor or Tatara with Mining Rigs</li>
+            <li><strong>Tips:</strong> Group mining with boosts is far more efficient and safer.</li>
+        </ul>
+    </div>
+</section>
+
+    <!-- Ore Yield Examples -->
+    <section class="balances-section">
+        <div class="section-header">
+            <h1 class="glow-text">💸 ISK Yield Per Ore Type</h1>
+            <p>Compare ISK generated per mining cycle using Covetor setups and crystals. Values are based on example fits and current market averages.</p>
+        </div>
+    
+        <div class="transaction-card">
+            <table class="transaction-log">
+                <thead>
+                    <tr>
+                        <th>Ore Type</th>
+                        <th>Ship</th>
+                        <th>Crystals</th>
+                        <th>Boosts</th>
+                        <th>Yield / Cycle</th>
+                        <th>ISK / Cycle</th>
+                        <th>ISK / Hour</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Gneiss</td>
+                        <td>Covetor</td>
+                        <td>Variegated Asteroid Mining Crystal Type B II (x2)</td>
+                        <td>Yes</td>
+                        <td>804</td>
+                        <td>2,600,000 ISK</td>
+                        <td>10,400,000 ISK</td>
+                    </tr>
+                    <tr>
+                        <td>Kernite</td>
+                        <td>Covetor</td>
+                        <td>Coherent Asteroid Mining Crystal Type B II (x2)</td>
+                        <td>Yes</td>
+                        <td>3,350</td>
+                        <td>3,200,000 ISK</td>
+                        <td>12,800,000 ISK</td>
+                    </tr>
+                    <tr>
+                        <td>Pyroxeres</td>
+                        <td>Covetor</td>
+                        <td>Simple Asteroid Mining Crystal Type B II (x2)</td>
+                        <td>Yes</td>
+                        <td>13,400</td>
+                        <td>524,000 ISK</td>
+                        <td>2,096,000 ISK</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="transaction-card">
+            <h3 class="glow-subtitle">🚀 Venture Mining</h3>
+            <p>The following skills were using when collecting data in this table:</p>
+            <ul class="isk-list">
+                <li><strong>Mining Frigate (+5% Yield per Level)</strong> IV</li>
+                <li><strong>Astrogeology (+5% Yield per Level)</strong> V</li>
+                <li><strong>Mining (+5% Yield per Level)</strong> V</li>
+            </ul>
+            <table class="transaction-log">
+                <thead>
+                    <tr>
+                        <th>Ore Type</th>
+                        <th>Yield / Cycle</th>
+                        <th>Cycle Time</th>
+                        <th>ISK / Cycle</th>
+                        <th>Estimated ISK / Hour</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jaspet</td>
+                        <td>244</td>
+                        <td>60s</td>
+                        <td>139,000 ISK</td>
+                        <td>8,340,000 ISK</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Fiery Kernite</td>
+                        <td>408</td>
+                        <td>60s</td>
+                        <td>65,600 ISK</td>
+                        <td>3,936,000 ISK</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Kernite</td>
+                        <td>408</td>
+                        <td>60s</td>
+                        <td>392,000 ISK</td>
+                        <td>23,520,000 ISK</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Luminous Kernite</td>
+                        <td>408</td>
+                        <td>60s</td>
+                        <td>102,000 ISK</td>
+                        <td>6,120,000 ISK</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Pyroxeres</td>
+                        <td>1,634</td>
+                        <td>60s</td>
+                        <td>57,600 ISK</td>
+                        <td>3,456,000 ISK</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Solid Pyroxeres</td>
+                        <td>1,634</td>
+                        <td>60s</td>
+                        <td>63,000 ISK</td>
+                        <td>3,780,000 ISK</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Viscous Pyroxeres</td>
+                        <td>1,634</td>
+                        <td>60s</td>
+                        <td>80,066 ISK</td>
+                        <td>4,803,960 ISK</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+        
+            <div class="transaction-note">
+                <p><em>Assumes Venture with 2x Miner II modules, and no boosts. ISK/hour estimates vary based on Jita market prices.</em></p>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

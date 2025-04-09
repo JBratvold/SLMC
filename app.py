@@ -40,5 +40,10 @@ def balances():
         PlutoSacredISK=config.PlutoSacredISK,
     )
 
+@app.route('/miningguide')
+def miningguide():
+    return render_template('miningguide.html')
+
+
 if __name__ == '__main__':
     app.run(debug=True)
