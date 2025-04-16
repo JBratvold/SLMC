@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Faction Warfare Tracker</h1>
+
+{% if error %}
+<p>{{ error }}</p>
+{% else %}
+<table>
+    <thead>
+        <tr>
+            <th>Solar System</th>
+            <th>Contested Percentage</th>
+            <th>Occupier Faction</th>
+            <th>Classification</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for system in systems %}
+        <tr class="{% if system.occupier_faction == 'Gallente Federation' %}gallente{% elif system.occupier_faction == 'Caldari State' %}caldari{% endif %}">
+            <td>{{ system.solar_system_name }}</td>
+            <td>{{ system.contested_percent }}%</td>
+            <td>{{ system.occupier_faction }}</td>
+            <td>{{ system.classification }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>    
+</table>
+{% endif %}
+{% endblock %}

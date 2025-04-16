@@ -26,3 +26,43 @@ tr:nth-child(even) {
 tr:nth-child(odd) {
     background-color: #3a3a3a;
 }
+
+/* Optional: Hover effect for rows */
+tr:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Light darkening on hover */
+}
+
+th.sortable {
+    cursor: pointer;
+    user-select: none;
+}
+
+th.sortable::after {
+    content: '';
+    float: right;
+    margin-left: 5px;
+    font-size: 0.9em;
+    color: #ccc;
+}
+
+th.sortable.asc::after {
+    content: '↑';
+    color: #fff;
+}
+
+th.sortable.desc::after {
+    content: '↓';
+    color: #fff;
+}
+
+/* Gallente Federation */
+.gallente {
+    background-color: rgba(0, 255, 0, 0.2); /* Light green background for Gallente */
+    color: #1c7f1e; /* Dark green text for better visibility */
+}
+
+/* Caldari State */
+.caldari {
+    background-color: rgba(0, 128, 255, 0.2); /* Light blue background for Caldari */
+    color: #00588b; /* Dark blue text for better visibility */
+}

@@ -44,6 +44,9 @@ def balances():
 def miningguide():
     return render_template('miningguide.html')
 
+from blueprints.fwtracker import fwtracker_bp
+app.register_blueprint(fwtracker_bp)
+
 
 if __name__ == '__main__':
     app.run(debug=True)

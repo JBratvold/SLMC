@@ -48,8 +48,6 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/balances.css') }}">
 
 
- 
-
     <title>{% block title %}Sacred Legend Mining Corporation{% endblock %}</title>
     
     <!-- Custom Styles Block -->
@@ -65,10 +63,10 @@
             <div class="nav-center">
                 <a href="/">Home</a>
                 <div class="dropdown">
-                    <button class="dropbtn">LP ▼</button>
+                    <button class="dropbtn">Factional Warfare ▼</button>
                     <div class="dropdown-content">
-                        
                         <a href="/lpcalculator">LP Calculator</a>
+                        <a href="/fwtracker">FW System Overview</a>
                     </div>
                 </div>
                 <div class="dropdown">
@@ -76,15 +74,12 @@
                     <div class="dropdown-content">
                         <a href="/miningguide">Mining Guide</a>
                         <a href="/yieldcalculator">Yield Calculator</a>
-                        
                     </div>
                 </div>
                 <div class="dropdown">
                     <button class="dropbtn">Management ▼</button>
                     <div class="dropdown-content">
-                        
                         <a href="/balances">ISK/LP Balances</a>
-                        
                     </div>
                 </div>
             </div>
@@ -116,6 +111,7 @@
     </footer>
 
     <script src="{{ url_for('static', filename='js/scroll-animations.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/fwtracker.js') }}" defer></script>
 
 </body>
 </html>
