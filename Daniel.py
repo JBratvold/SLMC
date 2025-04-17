@@ -441,5 +441,18 @@ SHIP_BLUEPRINTS = {
          "flat_isk_cost": 4_000_000,
          "lp_cost": 10_000,
          "manufacturing_cost": 0,
-     },                   
-}
+     }, 
+     "Caldari Navy Large Shield Extender (Craft)": {
+         "materials": { LargeShieldExtenderI: 1,
+                       FederationNavyFleetColonelInsigniaI: 2,
+                       FederationNavyFleetColonelInsigniaII: 4,
+                       Tritanium: 3_383,
+                       Pyerite: 2_769,
+                       Mexallon: 181,
+                      },
+         "flat_isk_cost": 4_000_000,
+         "lp_cost": 10_000,
+         "manufacturing_cost": 999_999_999_999_999, # TODO FIND MANUFACTURING COST FOR THIS SHIP
+     },
+     "C
+    }
