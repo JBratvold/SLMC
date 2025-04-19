@@ -454,5 +454,13 @@ SHIP_BLUEPRINTS = {
          "lp_cost": 10_000,
          "manufacturing_cost": 999_999_999_999_999, # TODO FIND MANUFACTURING COST FOR THIS SHIP
      },
-     "C
+     "Caldari Navy Small Shield Extender (NoCraft)": {
+         "materials": { SmallShieldExtenderI: 1,
+                       FederationNavyCommandSeargeantMajorInsigniaI: 2,
+                       FederationNavyFleetMajorInsigniaI: 4
+                      },
+         "flat_isk_cost": 500_000,
+         "lp_cost" 1_000,
+         "manufacturing_cost": 0
+     },
     }
