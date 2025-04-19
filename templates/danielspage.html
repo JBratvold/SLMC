@@ -21,6 +21,55 @@
 
 <section class="balances-section">
     <p>another section</p>
+</section> 
+
+<section class="balances-section">
+<body>
+
+  <h1>Countdown Timer</h1>
+  <div id="timer">01:00</div>
+  <button onclick="startTimer()">Start</button>
+
+  <!-- Beep sound -->
+  <audio id="beep-sound" src="https://www.soundjay.com/buttons/sounds/beep-07.mp3" preload="auto"></audio>
+
+  <script>
+    let duration = 60; // seconds
+    let timeLeft = duration;
+    let timer;
+
+    function startTimer() {
+      clearInterval(timer);
+      timeLeft = duration;
+      updateDisplay();
+
+      timer = setInterval(() => {
+        timeLeft--;
+        updateDisplay();
+
+        if (timeLeft <= 0) {
+          playBeep();
+          timeLeft = duration; // reset timer
+        }
+      }, 1000);
+    }
+
+    function updateDisplay() {
+      const minutes = Math.floor(timeLeft / 60);
+      const seconds = timeLeft % 60;
+      document.getElementById("timer").textContent =
+        `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    }
+
+    function playBeep() {
+      const beep = document.getElementById("beep-sound");
+      beep.currentTime = 0;
+      beep.play();
+    }
+  </script>
+
+</body>
 </section>
+
 
 {% endblock %}
