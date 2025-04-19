@@ -44,6 +44,10 @@ def balances():
 def miningguide():
     return render_template('miningguide.html')
 
+@app.route('/danielspage')
+def danielspage():
+    return render_template('danielspage.html')
+
 from blueprints.fwtracker import fwtracker_bp
 app.register_blueprint(fwtracker_bp)
 
