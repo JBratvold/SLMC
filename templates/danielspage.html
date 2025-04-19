@@ -29,29 +29,40 @@
   <h1>Countdown Timer</h1>
   <div id="timer">01:00</div>
   <button onclick="startTimer()">Start</button>
+  <button onclick="togglePause()">Pause</button>
 
-  <!-- Beep sound -->
   <audio id="beep-sound" src="https://media.geeksforgeeks.org/wp-content/uploads/20190531135120/beep.mp3" preload="auto"></audio>
 
   <script>
     let duration = 60; // seconds
     let timeLeft = duration;
     let timer;
+    let isPaused = false;
 
     function startTimer() {
       clearInterval(timer);
       timeLeft = duration;
       updateDisplay();
+      isPaused = false;
 
-      timer = setInterval(() => {
-        timeLeft--;
-        updateDisplay();
+      timer = setInterval(tick, 1000);
+    }
 
-        if (timeLeft <= 0) {
-          playBeep();
-          timeLeft = duration; // reset timer
-        }
-      }, 1000);
+    function tick() {
+      if (isPaused) return;
+
+      timeLeft--;
+      updateDisplay();
+
+      if (timeLeft <= 0) {
+        playBeep();
+        timeLeft = duration;
+      }
+    }
+
+    function togglePause() {
+      isPaused = !isPaused;
+      document.querySelector('button[onclick="togglePause()"]').textContent = isPaused ? "Resume" : "Pause";
     }
 
     function updateDisplay() {
@@ -69,6 +80,7 @@
   </script>
 
 </body>
+
 </section>
 
 
