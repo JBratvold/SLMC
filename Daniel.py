@@ -460,7 +460,7 @@ SHIP_BLUEPRINTS = {
                        FederationNavyFleetMajorInsigniaI: 4
                       },
          "flat_isk_cost": 500_000,
-         "lp_cost" 1_000,
+         "lp_cost": 1_000,
          "manufacturing_cost": 0
      },
     }
