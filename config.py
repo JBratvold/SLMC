@@ -3,7 +3,7 @@
 
 # Individual's LP balance within Sacred Legend Mining Corporation:
 # For example, if Sin Sacred owns 500k LP in the SLMC corp wallet, then set SinSacredLP = 500_000
-SinSacredLP = 0
+SinSacredLP = 384_871
 JupiterSacredLP = 0
 PlutoSacredLP = 0   
 DanielJoshLiquidationLP = 812_825
